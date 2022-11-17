@@ -1,6 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import HomeScreen from "./screens/HomeScreen";
-import Test from "./screens/HomeScreen";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   return (
@@ -8,7 +7,9 @@ function App() {
       <div>
         <header>
           <div>
-            <a href="/" className="page-logo">ReachJS</a>
+            <a href="/" className="page-logo">
+              ReachJS
+            </a>
           </div>
           <nav>
             <ul>
@@ -23,7 +24,7 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Test />} />
+            <Route path="/" element={<HomeScreen />} />
           </Routes>
         </main>
       </div>

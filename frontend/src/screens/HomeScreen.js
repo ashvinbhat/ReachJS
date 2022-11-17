@@ -35,7 +35,7 @@ export default function App() {
     <div className="sidebar">
       <h2>Map</h2>
       {/* Longitude: {lng} | Latitude: {lat} | Zoom: {zoom} */}
-      <div ref={mapContainer} className="map-container" />
+      <div ref={mapContainer} className="map-container"/>
       <h2>Categories</h2>
       <ul>
         <li>
@@ -68,6 +68,48 @@ export default function App() {
         <li>
           <div>
             <h3>FRUITS</h3>
+            <img
+              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
+              alt="FRUITS"
+            />
+          </div>
+        </li>
+      </ul>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h2>Vendors</h2>
+      <ul>
+        <li>
+          <div>
+            <h3>Vendor</h3>
+            <img
+              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
+              alt="FRUITS"
+            />
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vendor</h3>
+            <img
+              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
+              alt="FRUITS"
+            />
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vendor</h3>
+            <img
+              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
+              alt="FRUITS"
+            />
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vendor</h3>
             <img
               src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
               alt="FRUITS"
