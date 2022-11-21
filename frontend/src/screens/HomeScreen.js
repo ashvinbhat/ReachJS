@@ -1,14 +1,20 @@
 import "./HomeScreen.css";
 import React from "react";
 
-import { Map, } from "react-map-gl";
+import { Map } from "react-map-gl";
 import maplibregl from "maplibre-gl";
 function HomeScreen() {
+  const openInNewTab = (url) => {
+    window.open(url, "_self", "noopener,noreferrer");
+  };
 
   return (
     <div>
       <h2>Map</h2>
-      <div className="map-container" onClick={() => { console.log('hello');  }}>
+      <div
+        className="map-container"
+        onClick={() => openInNewTab("https://www.google.com/maps")}
+      >
         <Map
           mapLib={maplibregl}
           initialViewState={{
