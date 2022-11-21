@@ -1,25 +1,41 @@
 import "./HomeScreen.css";
-import React from "react";
 
-import { Map, } from "react-map-gl";
-import maplibregl from "maplibre-gl";
-function HomeScreen() {
+import React, { useRef, useEffect, useState } from "react";
+import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiYXNodmluYmhhdCIsImEiOiJjbGFqb3JhMHowZWZoM25xcXV0eTVzN2YyIn0.Ud804we1YqFbNo5WspD2-w";
+export default function App() {
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lng, setLng] = useState(77.53480664584247);
+  const [lat, setLat] = useState(12.934137959637118);
+  const [zoom, setZoom] = useState(15);
+
+  useEffect(() => {
+    if (map.current) return; // initialize map only once
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [lng, lat],
+      zoom: zoom,
+    });
+  });
+
+  useEffect(() => {
+    if (!map.current) return; // wait for map to initialize
+    map.current.on("move", () => {
+      setLng(map.current.getCenter().lng.toFixed(4));
+      setLat(map.current.getCenter().lat.toFixed(4));
+      setZoom(map.current.getZoom().toFixed(2));
+    });
+  });
 
   return (
-    <div>
+    <div className="sidebar">
       <h2>Map</h2>
-      <div className="map-container" onClick={() => { console.log('hello');  }}>
-        <Map
-          mapLib={maplibregl}
-          initialViewState={{
-            longitude: 77.53480664584247,
-            latitude: 12.934137959637118,
-            zoom: 14,
-          }}
-          style={{ width: "100%", height: "100vh", borderRadius: "50px" }}
-          mapStyle="https://api.maptiler.com/maps/streets-v2/style.json?key=LdmU2sRXjPBQtW9tJa8G"
-        />
-      </div>
+      {/* Longitude: {lng} | Latitude: {lat} | Zoom: {zoom} */}
+      <div ref={mapContainer} className="map-container"/>
       <h2>Categories</h2>
       <ul>
         <li>
@@ -107,5 +123,3 @@ function HomeScreen() {
     </div>
   );
 }
-
-export default HomeScreen;

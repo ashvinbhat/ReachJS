@@ -54,11 +54,11 @@ img:hover {
   transition: 0.5s;
 }
 
-a,
+/* a,
 button {
   display: none;
 }
-
+ */
 .page-logo {
   display: flex;
 }
