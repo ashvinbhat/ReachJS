@@ -1,35 +1,29 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import HomeScreen from "./screens/HomeScreen";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
 import HomeScreen from "./screens/HomeScreen";
+import Categories from "./screens/Categories";
+import Sellers from "./screens/Sellers";
+import Map from "./screens/Map";
+import About from "./screens/About";
+import Register from "./screens/Categories";
+import Support from "./screens/Support";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <header>
-          <div>
-            <a href="/" className="page-logo">
-              ReachJS
-            </a>
-          </div>
-          <nav>
-            <ul>
-              <li>Categories</li>
-              <li>Sellers</li>
-              <li>Map</li>
-              <li>About</li>
-              <li>Register</li>
-              <li>Support</li>
-            </ul>
-          </nav>
-        </header>
-        <main>
-          <Routes>
-            <Route path="/" element={<HomeScreen />} />
-          </Routes>
-        </main>
+    <>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/sellers" element={<Sellers />} />
+          <Route path="/map" element={<Map />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/support" element={<Support />} />
+        </Routes>
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 

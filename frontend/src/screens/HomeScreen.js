@@ -5,7 +5,7 @@ import { Map } from "react-map-gl";
 import maplibregl from "maplibre-gl";
 function HomeScreen() {
   const openInNewTab = (url) => {
-    window.open(url, "_self", "noopener,noreferrer");
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
