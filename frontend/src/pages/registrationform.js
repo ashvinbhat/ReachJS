@@ -8,12 +8,12 @@ export default function RegistrationForm(){
         const [lname, setLname] = useState('');
         const [phno, setphno] = useState('');
         const [address, setAddress] = useState('');
-        const [products, setProducts] = useState('');
+        const [products, setProducts] = useState([]);
+        const [categories, setCategories] = useState([]);
         const [idproof, setIdproof] = useState('');
 
         function submitRegistration(event){
             event.preventDefault();
-
             const details =
             {
                 fname:fname,
@@ -21,16 +21,21 @@ export default function RegistrationForm(){
                 phno:phno,
                 address:address,
                 products:products,
+                categories: categories,
                 idproof:idproof,
             }
             
-            console.log("details reg form", details)
+            //console.log("details reg form", details)
 
-            axios.post("/register", details)   //the port should be same as the server port
-                .then(res=>console.log("posted", res.data))
+            axios.post("/register", details)
+                .then((res)=>{
+                    console.log("posted", res.data)
+                    setCategories([]);
+                    setProducts([]);
+                })
                 .catch(err=>console.log(err));
         }
-        
+
         return(
             <div>
                 <nav style={{backgroundColor:" #282c34"}}><br/><br/></nav>
@@ -72,18 +77,20 @@ export default function RegistrationForm(){
                             <textarea class="inputarea"  required onChange={(e)=>setAddress(e.target.value)}></textarea>
                             <br/>
                             <label class="formlabel">Products</label>
-                            <textarea class="inputarea"  required onChange={(e)=>setProducts(e.target.value)}></textarea>
+                            <textarea class="inputarea"  required onChange={(e)=>setProducts(()=>e.target.value.split(", "))}></textarea>
                             <br/>
                             <label class="formlabel">Photos of shop and products</label>
                             <br/>
                             <label class = "formlabel">Category: </label>
-                            <input type="checkbox" value="Fruits"/>
+                            <input type="checkbox" value="Fruits" onClick={(e)=>setCategories((old)=>[...old, e.target.value])}/>
                             <label class = "formlabel">Fruits</label>
-                            <input type="checkbox" value="Vegetables" />
+                            <input type="checkbox" value="Vegetables" onClick={(e)=>setCategories((old)=>[...old, e.target.value])}/>
                             <label class = "formlabel">Vegetables</label>
-                            <input type="checkbox" value="Accessories" />
+                            <input type="checkbox" value="Greens" onClick={(e)=>setCategories((old)=>[...old, e.target.value])}/>
+                            <label class = "formlabel">Greens</label>
+                            <input type="checkbox" value="Accessories" onClick={(e)=>setCategories((old)=>[...old, e.target.value])}/>
                             <label class = "formlabel">Accessories</label>
-                            <input type="checkbox" value="Groceries" />
+                            <input type="checkbox" value="Groceries" onClick={(e)=>setCategories((old)=>[...old, e.target.value])}/>
                             <label class = "formlabel">Groceries</label>
                             <br/>
                             <input type="file" name="idimg"></input> 
