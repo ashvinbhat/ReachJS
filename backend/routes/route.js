@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Vendor = require("../models/vendorModel");
 
-console.log(process.env.PORT)
-
 router.post("/register", (req, res)=>{
     const newVendor = new Vendor({
         fname: req.body.fname,
