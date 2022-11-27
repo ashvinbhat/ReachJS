@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
-import HomeScreen from "./pages/HomeScreen";
-import Categories from "./pages/Categories";
-import Sellers from "./pages/Sellers";
-import Map from "./pages/Map";
 import About from "./pages/About";
+import Categories from "./pages/Categories";
+import HomeScreen from "./pages/HomeScreen";
+import Map from "./pages/Map";
 import Register from "./pages/Register";
+import Sellers from "./pages/Sellers";
 import Support from "./pages/Support";
 
 function App() {
