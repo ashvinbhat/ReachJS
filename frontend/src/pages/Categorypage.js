@@ -1,19 +1,30 @@
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 export default function Category(props)
 {
-    const requestbody = {
-        pagename:props.name
-    }
-    console.log("prop name", props.name);
-    const options = {
-        headers : {"Content-Type":"text/plain"}
-    }
-    axios.get(props.name, requestbody, options)
-        .then((res)=>{console.log("get sent", res.data)})
-        .catch((err)=>console.log("get error", err))
-    ;
-    return(
-        <h1>Needs to display all {props.name} vendors from database</h1>
+    const [Vendors, setVendors] = useState("");
+
+    useEffect(() => {
+      const fetchdata = async () => {
+        const data = await axios.get("/sellers/get");
+        setVendors(data);
+  /*       console.log("data", data);
+        console.log("vendors", Vendors);
+        console.log("fname", data.data[0].fname); */
+      };
+      fetchdata();
+    }, []);
+    return (
+        <div>
+            <h1>Needs to display all {props.name} vendors from database</h1>
+            {/* display all the vendors with the same prop name */}
+            {Vendors.map((vendor) => (
+                <div key={vendor._id}>
+                    <h1>{vendor.fname}</h1>
+                </div>
+            ))}
+                
+        </div>
     )
 }

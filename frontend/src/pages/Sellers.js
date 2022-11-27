@@ -7,7 +7,7 @@ export default function Sellers() {
 
   useEffect(() => {
     const fetchdata = async () => {
-      const data = await axios.get("/Sellers/get");
+      const data = await axios.get("/sellers/get");
       setVendors(data);
 /*       console.log("data", data);
       console.log("vendors", Vendors);

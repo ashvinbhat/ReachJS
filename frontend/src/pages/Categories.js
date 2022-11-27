@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //import axios from "axios";
+import "../css/categories.css";
 
 export default function Categories() {
   return (
