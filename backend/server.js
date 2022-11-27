@@ -13,7 +13,7 @@ mongoose.connect("mongodb+srv://amrithagk:fjoSNAQxsIBtvenG@cluster0.skymq2d.mong
 );
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app.use(express.json()) //getting body parser in the application
 app.use(express.urlencoded({extended: true})) //getting body parser in the application

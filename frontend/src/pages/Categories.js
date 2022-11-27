@@ -5,7 +5,7 @@ import "../css/categories.css";
 
 export default function Categories() {
   return (
-    <>
+    <div className="container-category">
       <Link to="/Fruits">
         <div className="categoryCard fruit">FRUITS</div>
       </Link>
@@ -29,6 +29,6 @@ export default function Categories() {
       <Link to="/categories/HomeEssentials">
         <div className="categoryCard homessentials">HOME ESSENTIALS</div>
       </Link>
-    </>
+    </div>
   );
 }
