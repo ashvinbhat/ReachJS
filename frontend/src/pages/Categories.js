@@ -1,36 +1,33 @@
 import React from "react";
-import axios from "axios";
-import styles from "../css/categories.css";
+import { Link } from "react-router-dom";
+//import axios from "axios";
 
-export default function Categories(){
+export default function Categories() {
+  return (
+    <>
+      <Link to="/Fruits">
+        <div className="categoryCard fruit">FRUITS</div>
+      </Link>
 
-    function showVendors(category){
-        console.log("clicked")
-        axios.get("/categories", category)
-        .then((res)=>{console.log("get sent", res.data)})
-        .catch((err)=>console.log("get error", err))
-        ;
-    }
+      <Link to="/categories/Vegetables">
+        <div className="categoryCard vegetable">VEGETABLES</div>
+      </Link>
 
-    return(
-        <>
-        <div className="container">
-        <div className="categoryCard" onClick={showVendors("Fruits")}>
-            <h3>FRUITS</h3>
-        </div>
-        <div className="categoryCard" onClick={showVendors("Vegetables")}>
-            VEGETABLES
-        </div>
-        <div className="categoryCard" onClick={showVendors("Greens")}>
-            GREENS
-        </div>
-        <div className="categoryCard" onClick={showVendors("Groceries")}>
-            GROCERIES
-        </div>
-        <div className="categoryCard" onClick={showVendors("Accessories")}>
-            ACEESORIES
-        </div>
-        </div>
-        </>
-    )
+      <Link to="/categories/Greens">
+        <div className="categoryCard greens">GREENS</div>
+      </Link>
+
+      <Link to="/categories/Groceries">
+        <div className="categoryCard grocery">GROCERIES</div>
+      </Link>
+
+      <Link to="/categories/Accessories">
+        <div className="categoryCard accessory">ACCESSORIES</div>
+      </Link>
+
+      <Link to="/categories/HomeEssentials">
+        <div className="categoryCard homessentials">HOME ESSENTIALS</div>
+      </Link>
+    </>
+  );
 }
