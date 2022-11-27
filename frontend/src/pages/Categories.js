@@ -1,5 +1,4 @@
 import React from "react";
-import mongoose from "mongoose";
 import axios from "axios";
 import styles from "../css/categories.css";
 
