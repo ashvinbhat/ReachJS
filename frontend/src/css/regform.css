@@ -4,15 +4,16 @@ body{
     text-align: center;
 }
 
+
 .formtile{
     background-color: #929394;
     box-shadow: 2px 2px 20px 6px rgb(31, 30, 30);
     border-radius: 4px;
     margin: 40px;
     padding: 20px;
-    font-size: 20px;
+    display: inline-block;
     color:black;
-
+    width:fit-content;
 }
 
 .formtile > h3{
@@ -20,5 +21,7 @@ body{
 }
 
 .formlabel{
-    margin:10px
+    margin-left:0px;
 }
+
+
