@@ -26,6 +26,7 @@ body{
   color: white;
   padding: 15px 50px;
   margin-bottom: 0;
+  position:sticky;
 }
 main{
   margin-top: 0;

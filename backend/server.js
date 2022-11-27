@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const routesUrls = require("./routes/route.js");
 const cors = require("cors");
+const Vendors = require("./models/vendorModel.js");
 
 dotenv.config();
 
@@ -15,8 +16,34 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json()) //getting body parser in the application
+app.use(express.urlencoded({extended: true})) //getting body parser in the application
 app.use(cors())
 app.use("/", routesUrls) //whatever is in routeUrls will be appended to /
+
+app.post("/register/add", (req, res) => {
+  const vendordetails = req.body;
+  console.log("vendordetails", vendordetails);
+
+  Vendors.create(vendordetails, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+    else {
+      res.status(201).send(data);
+    }
+  });
+});
+
+app.get("/sellers/get", (req, res) => {
+  Vendors.find((err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(data);
+    }
+  });
+});
+
 app.listen(port, () => {
   console.log(`server at http://localhost:${port}`);
 });

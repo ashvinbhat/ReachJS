@@ -1,5 +1,4 @@
 import "../css/styling.css";
-import React from "react";
 
 import { Map } from "react-map-gl";
 import maplibregl from "maplibre-gl";
