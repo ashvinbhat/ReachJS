@@ -1,4 +1,4 @@
-import "./HomeScreen.css";
+import "../css/HomeScreen.css";
 import React from "react";
 
 import { Map } from "react-map-gl";
