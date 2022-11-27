@@ -5,7 +5,7 @@ body{
 
 
 .formtile{
-    background-color: white;
+    background-color: #a5a6a9;
     box-shadow: 2px 2px 20px 6px rgb(31, 30, 30);
     border-radius: 4px;
     margin: 40px;
@@ -15,6 +15,11 @@ body{
 
 .formlabel{
     padding: 20px;
+    font-size: 20px;
+}
+
+.formfield *{
+    vertical-align: middle;
 }
 
 .inputbox{

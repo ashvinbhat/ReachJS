@@ -1,6 +1,6 @@
 const express = require("express");
-const router = express.Router();
 const Vendor = require("../models/vendorModel");
+const router = express.Router();
 
 router.post("/register", (req, res)=>{
     const newVendor = new Vendor({

@@ -6,7 +6,7 @@ const cors = require("cors");
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI, ()=>console.log("DB connected"))
+mongoose.connect("mongodb+srv://amrithagk:fjoSNAQxsIBtvenG@cluster0.skymq2d.mongodb.net/VendorDetails?retryWrites=true&w=majority")
     .then(()=>{console.log("Connection successful");})
     .catch((err)=>{console.log("Connection unsuccessful\n", err.message);}
 );
