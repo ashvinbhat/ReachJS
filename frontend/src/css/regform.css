@@ -1,27 +1,61 @@
 body{
     background-color: #464749;
     color:white;
-    text-align: center;
 }
 
 
 .formtile{
-    background-color: #929394;
+    background-color: white;
     box-shadow: 2px 2px 20px 6px rgb(31, 30, 30);
     border-radius: 4px;
     margin: 40px;
     padding: 20px;
-    display: inline-block;
     color:black;
-    width:fit-content;
-}
-
-.formtile > h3{
-    margin-left:0px;
 }
 
 .formlabel{
-    margin-left:0px;
+    padding: 20px;
 }
 
+.inputbox{
+    margin:10px;
+    padding:20px;
+    width: 350px;
+    height: 20px;
+    border: lightgrey solid 0.5px;
+    border-radius: 25px;
+}
 
+.inputarea{
+    margin:10px;
+    padding:20px;
+    width: 350px;
+    height: 60px;
+    border: lightgrey solid 0.5px;
+    border-radius: 30px;
+}
+
+select .blktext{
+    color: black;
+}
+
+a{
+    color:white;
+}
+
+legend{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 24px;
+}
+
+button{
+    background-color:rgb(83, 234, 239);
+    width:180px;
+    height: 60px;
+    font-size: 30px;
+    font-style: bold;
+    border-radius: 25px;
+    box-shadow: 2px 3px 2px 2px rgb(31, 30, 30);
+    border-color:rgb(83, 234, 239);
+    border-style: hidden;
+}
