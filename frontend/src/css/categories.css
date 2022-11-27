@@ -3,7 +3,7 @@ body{
     color:white;
 }
 
-.container{
+.container-category{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-left: 30px;
@@ -13,7 +13,7 @@ body{
     background-color: white;
     box-shadow: 2px 2px 20px 6px rgb(31, 30, 30);
     border-radius: 4px;
-    margin: 40px;
+    margin: 40px auto;
     padding: 20px;
     width: 300px;
     height: 200px;
