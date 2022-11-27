@@ -1,71 +1,77 @@
-body{
-    background-color: #464749;
-    color:white;
+body {
+  background-color: #464749;
+  color: white;
 }
 
-
-.formtile{
-    background-color: #a5a6a9;
-    box-shadow: 2px 2px 20px 6px rgb(31, 30, 30);
-    border-radius: 4px;
-    margin: 40px;
-    padding: 20px;
-    color:black;
+.formtile {
+  background-color: #a5a6a9;
+  box-shadow: 2px 2px 20px 6px rgb(31, 30, 30);
+  border-radius: 4px;
+  margin: 40px;
+  padding: 20px;
+  color: black;
 }
 
-.formlabel{
-    padding: 20px;
-    font-size: 20px;
+.formlabel {
+  padding: 20px;
+  font-size: 20px;
 }
 
-.formfield *{
-    vertical-align: middle;
+.formfield * {
+  vertical-align: middle;
 }
 
-.inputbox{
-    margin:10px;
-    padding:20px;
-    width: 350px;
-    height: 20px;
-    border: lightgrey solid 0.5px;
-    border-radius: 25px;
+.inputbox {
+  margin: 10px;
+  padding: 20px;
+  width: 350px;
+  height: 20px;
+  border: lightgrey solid 0.5px;
+  border-radius: 25px;
 }
 
-.inputarea{
-    margin:10px;
-    padding:20px;
-    width: 350px;
-    height: 60px;
-    border: lightgrey solid 0.5px;
-    border-radius: 30px;
+.inputarea {
+  margin: 10px;
+  padding: 20px;
+  width: 350px;
+  height: 60px;
+  border: lightgrey solid 0.5px;
+  border-radius: 30px;
 }
 
-select .blktext{
-    color: black;
+select .blktext {
+  color: black;
 }
 
-a{
-    color:white;
+a {
+  color: white;
 }
 
-legend{
-    font-family: 'Franklin Gothic Medium';
-    font-size: 24px;
+legend {
+  font-family: "Franklin Gothic Medium";
+  font-size: 24px;
 }
 
-button{
-    background-color:rgb(83, 234, 239);
-    width:180px;
-    height: 60px;
-    font-size: 30px;
-    font-style: bold;
-    border-radius: 25px;
-    box-shadow: 2px 3px 2px 2px rgb(31, 30, 30);
-    border-color:rgb(83, 234, 239);
-    border-style: hidden;
-    cursor: pointer;
+button {
+  background-color: rgb(83, 234, 239);
+  width: 180px;
+  height: 60px;
+  font-size: 30px;
+  font-style: bold;
+  border-radius: 25px;
+  box-shadow: 2px 3px 2px 2px rgb(31, 30, 30);
+  border-color: rgb(83, 234, 239);
+  border-style: hidden;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(6, 133, 137);
+  box-shadow: 2px 3px 2px 2px rgb(31, 30, 30);
+  border-color: rgb(83, 234, 239);
+  border-style: hidden;
+  cursor: pointer;
 }
 
-button:hover{
-    background-color:rgb(15, 166, 171);
+button:hover {
+  background-color: rgb(15, 166, 171);
 }

@@ -32,4 +32,17 @@ function CustomLink({ to, children, ...props }) {
       </Link>
     </li>
   );
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 3edc274 (update)
+
+  return (
+    <li className={isActive  ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  );
 }
