@@ -1,0 +1,15 @@
+h1{
+    padding-left: 2%;
+    font-size: 100px;
+    text-align: center;
+}
+
+.category-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+h3{
+    padding: 7% 0% 0% 0%;
+}
