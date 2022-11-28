@@ -20,7 +20,7 @@
 }
 
 h2 {
-  margin: 2% auto 3% auto;
+  margin: 2% auto 2.5% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,11 +55,6 @@ img:hover {
   cursor: pointer;
 }
 
-/* a,
-button {
-  display: none;
-}
- */
 .page-logo {
   display: flex;
 }
@@ -67,7 +62,7 @@ button {
 .footer{
   background-color: #1b1e24;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 2fr);
 }
 
 .footer-card{
@@ -75,6 +70,10 @@ button {
   margin-left: 20px;
   font-size: 27px;
   margin-left: 200px;
+}
+
+hr{
+  margin-right: 150px;
 }
 
 h4{
@@ -89,6 +88,11 @@ h4{
   margin-left: 30px;
   margin-top: 0px;
   margin-bottom: 40px;
+}
+
+.footer-links{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .li-space{

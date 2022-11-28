@@ -26,7 +26,7 @@ function HomeScreen() {
           mapStyle="https://api.maptiler.com/maps/streets-v2/style.json?key=LdmU2sRXjPBQtW9tJa8G"
         />
       </div>
-      <h2>Categories</h2>
+      <h2>CATEGORIES</h2>
       <div className="container-category">
       <Link to="/Fruits">
         <div className="categoryCard fruit"><p className="textmiddle">FRUITS</p></div>
@@ -55,18 +55,21 @@ function HomeScreen() {
       <br></br>
       <br></br>
       <div className="footer">
-          <div className="footer-card links">
+          <div className="footer-card">
             <h4>ReachJS</h4>
             <p className="footer-cardp">all rights reserved</p>
+            <hr/>
+          <div className="footer-links">
           <CustomLink to="/categories">Categories</CustomLink>
           <CustomLink to="/sellers">Sellers</CustomLink>
           <CustomLink to="/map">Map</CustomLink>
           <CustomLink to="/about">About</CustomLink>
           <CustomLink to="/register">Register</CustomLink>
           <CustomLink to="/support">Support</CustomLink>
+          </div>
+          <hr/>
           <br/>
           </div>
-          <div className="footer-card"></div>
       </div>
     </div>
   );
