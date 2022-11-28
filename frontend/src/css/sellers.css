@@ -24,6 +24,7 @@
     width: 600px;
     font-size: 25px;
     border-spacing: 15px;
+    transition: 0.5s;
 }
 
 /* style the vendorbox hover to not overlap the navbar */
