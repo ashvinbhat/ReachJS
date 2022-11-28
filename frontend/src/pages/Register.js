@@ -13,6 +13,10 @@ export default function RegistrationForm() {
   const [categories, setCategories] = useState([]);
   const [idproof, setIdproof] = useState("");
 
+  const openInNewTab = (url) => {
+    window.open(url, "_self", "noopener,noreferrer");
+  };
+
   function submitRegistration(event) {
     event.preventDefault();
     const details = {
@@ -39,10 +43,11 @@ export default function RegistrationForm() {
         setProducts([]);
       })
       .catch((err) => console.log(err));
+    openInNewTab("/");
   }
 
   return (
-<div>
+    <div>
       <nav style={{ backgroundColor: " #282c34" }}>
         <br />
         <br />
@@ -172,6 +177,7 @@ export default function RegistrationForm() {
               </td>
               </tr>
               <br />
+
               <tr>
               <td className="formlabel" colspan="2">
                 Click&nbsp;
@@ -192,11 +198,13 @@ export default function RegistrationForm() {
                 required/>
               </td>
               </tr>
+
               <br />
               <br />
               <tr>
               <td>
               <label className="formlabel">Longitude</label>
+
               </td>
               <td>
               <input className="inputbox" 
@@ -206,6 +214,7 @@ export default function RegistrationForm() {
                 required/>
               </td>
               </tr>
+
               <br />
               <br />
               <tr>

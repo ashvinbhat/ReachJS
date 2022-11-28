@@ -12,7 +12,7 @@ mongoose.connect("mongodb+srv://amrithagk:fjoSNAQxsIBtvenG@cluster0.skymq2d.mong
     .catch((err)=>{console.log("Connection unsuccessful\n", err.message);}
 );
 
-const app = express();
+const app = express(); 
 const port = process.env.PORT || 3000;
 
 app.use(express.json()) //getting body parser in the application

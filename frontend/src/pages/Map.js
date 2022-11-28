@@ -1,25 +1,60 @@
-import { Map } from "react-map-gl";
+import axios from "axios";
 import maplibregl from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
+import React, { useEffect, useRef, useState } from "react";
+import "../css/map.css";
 
 export default function MapPage() {
-  const openInNewTab = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lng] = useState(77.53480664584247);
+  const [lat] = useState(12.934137959637118);
+  const [zoom] = useState(14);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios("/sellers/get");
+      console.log(result.data);
+      /* 
+      map.current = new maplibregl.Map({
+        container: mapContainer.current, 
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [lng, lat],
+        zoom: zoom,
+      }); */
+      // add marker for each vendor with popup containing vendor details and set html color to green
+      result.data.map((vendor) => {
+        new maplibregl.Marker({ color: "green" })
+          .setLngLat([vendor.longitude, vendor.latitude])
+          .setPopup(
+            new maplibregl.Popup({ offset: 25 }).setHTML(
+              `<h3>First Name: <br></br> ${vendor.fname}</h3>
+              <h3>Last Name: <br></br>${vendor.lname}</h3>
+              <h3>Phone Number:<br></br> ${vendor.phno}</h3>
+              <h3>Address: <br></br>${vendor.address}</h3>`
+            )
+          )
+          .addTo(map.current);
+        return null;
+      });
+    };
+
+    fetchData();
+
+    if (map.current) return; //stops map from intializing more than once
+    map.current = new maplibregl.Map({
+      container: mapContainer.current,
+      style:
+        "https://api.maptiler.com/maps/streets-v2/style.json?key=LdmU2sRXjPBQtW9tJa8G",
+      center: [lng, lat],
+      zoom: zoom,
+    });
+    map.current.addControl(new maplibregl.NavigationControl(), "top-left");
+  }, [lat, lng, zoom]);
+
   return (
-    <div
-      className="map-container-page"
-      onClick={() => openInNewTab("https://www.google.com/maps")}
-    >
-      <Map
-        mapLib={maplibregl}
-        initialViewState={{
-          longitude: 77.53480664584247,
-          latitude: 12.934137959637118,
-          zoom: 14,
-        }}
-        style={{ width: "100%", height: "100vh", borderRadius: "50px" }}
-        mapStyle="https://api.maptiler.com/maps/streets-v2/style.json?key=LdmU2sRXjPBQtW9tJa8G"
-      />
+    <div className="map-wrap">
+      <div ref={mapContainer} className="map" />
     </div>
   );
 }
