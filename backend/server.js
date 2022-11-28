@@ -34,7 +34,7 @@ app.post("/register/add", (req, res) => {
   });
 });
 
-app.get("/sellers/get", (req, res) => {
+app.get("/vendors/get", (req, res) => {
   Vendors.find((err, data) => {
     if (err) {
       res.status(500).send(err);

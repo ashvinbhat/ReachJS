@@ -7,7 +7,7 @@ export default function Category(props) {
 
   useEffect(() => {
     const fetchdata = async () => {
-      const data = await axios.get("/sellers/get");
+      const data = await axios.get("/vendors/get");
       setVendors(data);
     };
     fetchdata();

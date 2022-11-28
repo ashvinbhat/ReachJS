@@ -1,7 +1,7 @@
 import "../css/styling.css";
 import { Map } from "react-map-gl";
 import maplibregl from "maplibre-gl";
-import { Link, resolvePath, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 function HomeScreen() {
   const openInNewTab = (url) => {
@@ -61,7 +61,7 @@ function HomeScreen() {
             <hr/>
           <div className="footer-links">
           <CustomLink to="/categories">Categories</CustomLink>
-          <CustomLink to="/sellers">Sellers</CustomLink>
+          <CustomLink to="/vendors">Vendors</CustomLink>
           <CustomLink to="/map">Map</CustomLink>
           <CustomLink to="/about">About</CustomLink>
           <CustomLink to="/register">Register</CustomLink>

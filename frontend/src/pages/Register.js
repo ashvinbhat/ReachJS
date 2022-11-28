@@ -181,7 +181,7 @@ export default function RegistrationForm() {
               <tr>
               <td className="formlabel" colspan="2">
                 Click&nbsp;
-                <a href="https://www.gps-coordinates.net" target={"_blank"}>here</a>&nbsp;
+                <a href="https://www.gps-coordinates.net" target="__blank">here</a>&nbsp;
                 to get Latitude and Longitude
               </td>
               </tr>

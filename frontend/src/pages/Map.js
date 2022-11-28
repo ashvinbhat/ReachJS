@@ -13,7 +13,7 @@ export default function MapPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("/sellers/get");
+      const result = await axios("/vendors/get");
       console.log(result.data);
       /* 
       map.current = new maplibregl.Map({

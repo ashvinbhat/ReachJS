@@ -5,7 +5,7 @@ import Categories from "./pages/Categories";
 import HomeScreen from "./pages/HomeScreen";
 import Map from "./pages/Map";
 import Register from "./pages/Register";
-import Sellers from "./pages/Sellers";
+import Vendors from "./pages/Vendors";
 import Support from "./pages/Support";
 import Category from "./pages/Categorypage";
 
@@ -23,7 +23,7 @@ function App() {
           <Route path="/categories/Groceries" element={<Category name="Groceries"/>}></Route>
           <Route path="/categories/Accessories" element={<Category name="Accessories"/>}></Route>
           <Route path="/categories/HomeEssentials" element={<Category name="HomeEssentials"/>}></Route>
-          <Route path="/sellers" element={<Sellers />} />
+          <Route path="/vendors" element={<Vendors />} />
           <Route path="/map" element={<Map />} />
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
