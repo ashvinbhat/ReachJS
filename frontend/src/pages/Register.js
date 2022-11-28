@@ -9,8 +9,6 @@ export default function RegistrationForm() {
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
   const [address, setAddress] = useState("");
-  const [lat, setLat] = useState(null);
-  const [long, setLong] = useState(null);
   //const [latlong, setLatlong] = useState([]);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -27,13 +25,11 @@ export default function RegistrationForm() {
       lname: lname,
       phno: phno,
       address: address,
-      latitude: lat,
-      longitude: long,
       products: products,
       categories: categories,
       idproof: idproof,
       latitude: latitude,
-      longitude: longitude,
+      longitude: longitude
     };
 
     //console.log("latlong", latlong)
