@@ -13,6 +13,10 @@ export default function RegistrationForm() {
   const [categories, setCategories] = useState([]);
   const [idproof, setIdproof] = useState("");
 
+  const openInNewTab = (url) => {
+    window.open(url, "_self", "noopener,noreferrer");
+  };
+
   function submitRegistration(event) {
     event.preventDefault();
     const details = {
@@ -37,10 +41,11 @@ export default function RegistrationForm() {
         setProducts([]);
       })
       .catch((err) => console.log(err));
+    openInNewTab("/");
   }
 
   return (
-<div>
+    <div>
       <nav style={{ backgroundColor: " #282c34" }}>
         <br />
         <br />
@@ -134,22 +139,35 @@ export default function RegistrationForm() {
                 ></textarea>
               </p>
               <br />
-              <p>link to coordinate website</p>
-              <br/>
+              <p>
+                <a href="https://www.gps-coordinates.net" target="__blank">
+                  {" "}
+                  Click here to get coordinates of you shop
+                </a>
+              </p>
+              <br />
               <label className="formlabel">Latitude</label>
-              <input className="inputbox" 
-                type="text" 
-                placeholder="Latitude" 
-                onChange={(e)=>{setLatitude(e.target.value)}}
-                required/>
+              <input
+                className="inputbox"
+                type="text"
+                placeholder="Latitude"
+                onChange={(e) => {
+                  setLatitude(e.target.value);
+                }}
+                required
+              />
               <br />
               <br />
               <label className="formlabel">Longitude</label>
-              <input className="inputbox" 
-                type="text" 
-                placeholder="Longitude" 
-                onChange={(e)=>{setLongitude(e.target.value)}}
-                required/>
+              <input
+                className="inputbox"
+                type="text"
+                placeholder="Longitude"
+                onChange={(e) => {
+                  setLongitude(e.target.value);
+                }}
+                required
+              />
               <br />
               <br />
               <label className="formlabel">Category: </label>
