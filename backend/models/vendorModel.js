@@ -5,6 +5,8 @@ const vendorSchema = new mongoose.Schema(
     fname: { type: String, required: true },
     lname: { type: String, required: true },
     phno: { type: String, required: true, unique: true },
+    latitude: { type: String, required: true, unique: false },
+    longitude: { type: String, required: true, unique: false },
     address: { type: String, required: true },
     products: { type: [String], required: true },
     categories: {type: [String], required: true },

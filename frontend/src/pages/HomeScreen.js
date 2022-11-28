@@ -1,11 +1,10 @@
 import "../css/styling.css";
-import React from "react";
 
 import { Map } from "react-map-gl";
 import maplibregl from "maplibre-gl";
 function HomeScreen() {
   const openInNewTab = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(url, "_self", "noopener,noreferrer");
   };
 
   return (
@@ -13,7 +12,7 @@ function HomeScreen() {
       <h2>Map</h2>
       <div
         className="map-container"
-        onClick={() => openInNewTab("https://www.google.com/maps")}
+        onClick={() => openInNewTab("/map")}
       >
         <Map
           mapLib={maplibregl}

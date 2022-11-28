@@ -6,6 +6,8 @@ export default function RegistrationForm() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [phno, setphno] = useState("");
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
   const [address, setAddress] = useState("");
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -21,6 +23,8 @@ export default function RegistrationForm() {
       products: products,
       categories: categories,
       idproof: idproof,
+      latitude: latitude,
+      longitude: longitude,
     };
 
     //console.log("details reg form", details)
@@ -36,7 +40,7 @@ export default function RegistrationForm() {
   }
 
   return (
-    <div>
+<div>
       <nav style={{ backgroundColor: " #282c34" }}>
         <br />
         <br />
@@ -130,7 +134,23 @@ export default function RegistrationForm() {
                 ></textarea>
               </p>
               <br />
-              <label className="formlabel">Photos of shop and products</label>
+              <p>link to coordinate website</p>
+              <br/>
+              <label className="formlabel">Latitude</label>
+              <input className="inputbox" 
+                type="text" 
+                placeholder="Latitude" 
+                onChange={(e)=>{setLatitude(e.target.value)}}
+                required/>
+              <br />
+              <br />
+              <label className="formlabel">Longitude</label>
+              <input className="inputbox" 
+                type="text" 
+                placeholder="Longitude" 
+                onChange={(e)=>{setLongitude(e.target.value)}}
+                required/>
+              <br />
               <br />
               <label className="formlabel">Category: </label>
               <input
@@ -159,6 +179,14 @@ export default function RegistrationForm() {
               <label className="formlabel">Greens</label>
               <input
                 type="checkbox"
+                value="Groceries"
+                onClick={(e) =>
+                  setCategories((old) => [...old, e.target.value])
+                }
+              />
+              <label className="formlabel">Groceries</label>
+              <input
+                type="checkbox"
                 value="Accessories"
                 onClick={(e) =>
                   setCategories((old) => [...old, e.target.value])
@@ -167,18 +195,13 @@ export default function RegistrationForm() {
               <label className="formlabel">Accessories</label>
               <input
                 type="checkbox"
-                value="Groceries"
+                value="HomeEssentials"
                 onClick={(e) =>
                   setCategories((old) => [...old, e.target.value])
                 }
               />
-              <label className="formlabel">Groceries</label>
+              <label className="formlabel">Home Essentials</label>
               <br />
-              <input type="file" className="formlabel" name="idimg"></input>
-              <br />
-              <input type="file" className="formlabel" name="idimg"></input>
-              <br />
-              <input type="file" className="formlabel" name="idimg"></input>
             </fieldset>
           </div>
           <br />
