@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "../css/regform.css";
+import { Link } from "react-router-dom";
 
 export default function RegistrationForm() {
   const [fname, setFname] = useState("");
@@ -28,7 +29,7 @@ export default function RegistrationForm() {
       categories: categories,
       idproof: idproof,
       latitude: latitude,
-      longitude: longitude,
+      longitude: longitude
     };
 
     //console.log("latlong", latlong)
@@ -179,9 +180,9 @@ export default function RegistrationForm() {
               <br />
 
               <tr>
-              <td className="formlabel" colspan="2">
+              <td className="formlabel" colSpan="2">
                 Click&nbsp;
-                <a href="https://www.gps-coordinates.net" target="__blank">here</a>&nbsp;
+                <a href="https://www.gps-coordinates.net" target={"__blank"}>here</a>&nbsp;
                 to get Latitude and Longitude
               </td>
               </tr>
@@ -281,7 +282,7 @@ export default function RegistrationForm() {
           <input type="checkbox" name="t&c" value="consent" required />
           <label htmlFor="t&c" className="formlabel">
             I agree to the{" "}
-            <a href="termsandconditions.html">Terms and Conditions</a>
+            <Link to="/tnc" target={"__self"}>Terms and Conditions</Link>
           </label>
           <br />
           <br />

@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import Vendors from "./pages/Vendors";
 import Support from "./pages/Support";
 import Category from "./pages/Categorypage";
+import Tnc from "./pages/tnc";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/tnc" element={<Tnc />} />
         </Routes>
       </div>
     </>
