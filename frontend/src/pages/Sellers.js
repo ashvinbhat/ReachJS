@@ -18,17 +18,19 @@ export default function Sellers() {
 
   return (
     <div className="Sellers">
-      <h1>Sellers</h1>
+      <h1>VENDORS</h1>
       {/* display all the details of all vendors one below the other in a box*/}
       {Vendors.data &&
         Vendors.data.map((vendor) => (
-          <div className="vendorbox">
-            <h3>First Name: {vendor.fname}</h3>
-            <h3>Last Name: {vendor.lname}</h3>
-            <h3>Phone Number: {vendor.phno}</h3>
-            <h3>Address: {vendor.address}</h3>
-            <h3>Products: {vendor.products}</h3>
-            <h3>Categories: {vendor.categories}</h3>
+          <div>
+            <table className="vendorbox">
+            <tr><td>First Name:</td><td>{vendor.fname}</td></tr>
+            <tr><td>Last Name: </td><td>{vendor.lname}</td></tr>
+            <tr><td>Phone Number: </td><td>{vendor.phno}</td></tr>
+            <tr><td>Address: </td><td>{vendor.address}</td></tr>
+            <tr><td>Products: </td><td>{vendor.products}</td></tr>
+            <tr><td>Categories: </td><td>{vendor.categories.toString()}</td></tr>
+            </table>
           </div>
         ))}
     </div>
