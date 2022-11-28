@@ -63,3 +63,36 @@ button {
 .page-logo {
   display: flex;
 }
+
+.footer{
+  background-color: #1b1e24;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-card{
+  color: rgb(82, 196, 245);
+  margin-left: 20px;
+  font-size: 27px;
+  margin-left: 200px;
+}
+
+h4{
+  margin-bottom: 0px;
+  margin-left: 10px
+}
+
+.footer-cardp{
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.li-space{
+  margin:15px;
+  margin-left: 50px;
+  font-size:16px;
+}
