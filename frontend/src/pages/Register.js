@@ -9,7 +9,6 @@ export default function RegistrationForm() {
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
   const [address, setAddress] = useState("");
-  //const [latlong, setLatlong] = useState([]);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [idproof, setIdproof] = useState("");
@@ -180,9 +179,9 @@ export default function RegistrationForm() {
               <br />
 
               <tr>
-              <td className="formlabel" colspan="2">
+              <td className="formlabel" colSpan="2">
                 Click&nbsp;
-                <a href="https://www.gps-coordinates.net" target="__blank">here</a>&nbsp;
+                <a href="https://www.gps-coordinates.net" target={"__blank"}>here</a>&nbsp;
                 to get Latitude and Longitude
               </td>
               </tr>
