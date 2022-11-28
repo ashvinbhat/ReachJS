@@ -31,6 +31,8 @@ export default function RegistrationForm() {
       longitude: longitude,
     };
 
+    //console.log("latlong", latlong)
+
     //console.log("details reg form", details)
 
     axios
@@ -56,7 +58,12 @@ export default function RegistrationForm() {
           <div className="personaldetails formtile" style={styles.formtile}>
             <fieldset>
               <legend>OWNER DETAILS</legend>
+              <table>
+              <tr>
+              <td>
               <label className="formlabel row">First Name</label>
+              </td>
+              <td>
               <input
                 className="inputbox row"
                 type="text"
@@ -64,8 +71,14 @@ export default function RegistrationForm() {
                 required
                 onChange={(e) => setFname(e.target.value)}
               ></input>
+              </td>
+              </tr>
               <br />
+              <tr>
+              <td>
               <label className="formlabel">Last Name</label>
+              </td>
+              <td>
               <input
                 className="inputbox"
                 type="text"
@@ -73,8 +86,14 @@ export default function RegistrationForm() {
                 required
                 onChange={(e) => setLname(e.target.value)}
               ></input>
+              </td>
+              </tr>
               <br />
+              <tr>
+              <td>
               <label className="formlabel">Mobile Number</label>
+              </td>
+              <td>
               <input
                 type="tel"
                 className="inputbox"
@@ -82,10 +101,15 @@ export default function RegistrationForm() {
                 required
                 onChange={(e) => setphno(e.target.value)}
               ></input>
+              </td>
+              </tr>
               <br />
+              <tr>
+              <td>
               <label className="formlabel">ID Proof</label>
+              </td>
+              <td>
               <select
-                className="inputbox blktext"
                 name="idproof"
                 placeholder="ID Proof"
                 required
@@ -93,84 +117,111 @@ export default function RegistrationForm() {
               >
                 <option
                   defaultValue="Select"
-                  className="blktext"
                   value="Select ID Proof"
                 >
                   Select ID Proof
                 </option>
-                <option className="blktext" value="Aadhar Card">
+                <option value="Aadhar Card">
                   Aadhar Card
                 </option>
-                <option className="blktext" value="PAN Card">
+                <option value="PAN Card">
                   PAN Card
                 </option>
-                <option className="blktext" value="Voter ID">
+                <option value="Voter ID">
                   Voter ID
                 </option>
               </select>
-              <br />
+              </td>
+              </tr>
+              </table>
+              <br/>
+              
               <input type="file" className="formlabel" name="idimg"></input>
-              <br />
+              
+              <br/>
+              
             </fieldset>
           </div>
           <br />
           <div className="shopdetails formtile">
             <fieldset>
               <legend>SHOP DETAILS</legend>
-              <p className="formfield">
-                <label className="formlabel row">Shop Location</label>
-                <textarea
-                  className="inputarea"
-                  placeholder="Shop Location"
-                  required
-                  onChange={(e) => setAddress(e.target.value)}
-                ></textarea>
-              </p>
+              <table>
+              <tr>
+              <td>
+              <label className="formlabel row">Shop Location</label>
+              </td>
+              <td>
+              <textarea
+                className="inputarea"
+                placeholder="Shop Location"
+                required
+                onChange={(e) => setAddress(e.target.value)}
+              ></textarea>
+              </td>
+              </tr>
               <br />
-              <p className="formfield">
-                <label className="formlabel">Products</label>
-                <textarea
-                  className="inputarea"
-                  placeholder="Products"
-                  required
-                  onChange={(e) =>
-                    setProducts(() => e.target.value.split(", "))
-                  }
-                ></textarea>
-              </p>
+              <tr>
+              <td>
+              <label className="formlabel">Products</label>
+              </td>
+              <td>
+              <textarea
+                className="inputarea"
+                placeholder="Products"
+                required
+                onChange={(e) =>
+                  setProducts(() => e.target.value.split(", "))
+                }
+              ></textarea>
+              </td>
+              </tr>
               <br />
-              <p>
-                <a href="https://www.gps-coordinates.net" target="__blank">
-                  {" "}
-                  Click here to get coordinates of you shop
-                </a>
-              </p>
-              <br />
+
+              <tr>
+              <td className="formlabel" colspan="2">
+                Click&nbsp;
+                <a href="https://www.gps-coordinates.net" target={"_blank"}>here</a>&nbsp;
+                to get Latitude and Longitude
+              </td>
+              </tr>
+              <br/>
+              <tr>
+              <td>
               <label className="formlabel">Latitude</label>
-              <input
-                className="inputbox"
-                type="text"
-                placeholder="Latitude"
-                onChange={(e) => {
-                  setLatitude(e.target.value);
-                }}
-                required
-              />
+              </td>
+              <td>
+              <input className="inputbox" 
+                type="text" 
+                placeholder="Latitude" 
+                onChange={(e)=>{setLatitude(e.target.value)}}
+                required/>
+              </td>
+              </tr>
+
               <br />
               <br />
+              <tr>
+              <td>
               <label className="formlabel">Longitude</label>
-              <input
-                className="inputbox"
-                type="text"
-                placeholder="Longitude"
-                onChange={(e) => {
-                  setLongitude(e.target.value);
-                }}
-                required
-              />
+
+              </td>
+              <td>
+              <input className="inputbox" 
+                type="text" 
+                placeholder="Longitude" 
+                onChange={(e)=>{setLongitude(e.target.value)}}
+                required/>
+              </td>
+              </tr>
+
               <br />
               <br />
+              <tr>
+              <td>
               <label className="formlabel">Category: </label>
+              </td>
+              <td>
               <input
                 type="checkbox"
                 value="Fruits"
@@ -178,6 +229,7 @@ export default function RegistrationForm() {
                   setCategories((old) => [...old, e.target.value])
                 }
               />
+              
               <label className="formlabel">Fruits</label>
               <input
                 type="checkbox"
@@ -219,12 +271,15 @@ export default function RegistrationForm() {
                 }
               />
               <label className="formlabel">Home Essentials</label>
+              </td>
+              </tr>
               <br />
+              </table>
             </fieldset>
           </div>
-          <br />
+          <div className="consent">
           <input type="checkbox" name="t&c" value="consent" required />
-          <label htmlFor="t&c">
+          <label htmlFor="t&c" className="formlabel">
             I agree to the{" "}
             <a href="termsandconditions.html">Terms and Conditions</a>
           </label>
@@ -233,6 +288,9 @@ export default function RegistrationForm() {
           <button type="submit">REGISTER</button>
           <br />
           <br />
+          <br />
+          <br />
+          </div>
         </form>
       </div>
     </div>

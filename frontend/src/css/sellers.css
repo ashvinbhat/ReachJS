@@ -14,16 +14,17 @@
 
 /* style the vendorbox */
 .vendorbox {
-    background-color: rgb(98, 94, 94);
+    background-color: rgb(88, 107, 109);
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(0,0,0,.05);
     margin-bottom: 20px;
     padding: 20px;
     position: relative;
-    width:20%;
-    
-    
+    width: 600px;
+    font-size: 25px;
+    border-spacing: 15px;
+    transition: 0.5s;
 }
 
 /* style the vendorbox hover to not overlap the navbar */
