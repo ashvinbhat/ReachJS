@@ -12,7 +12,7 @@ export default function RegistrationForm() {
   const [address, setAddress] = useState("");
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [idproof, setIdproof] = useState("");
+  // const [idproof, setIdproof] = useState("");
 
   const openInNewTab = (url) => {
     window.open(url, "_self", "noopener,noreferrer");
@@ -27,7 +27,7 @@ export default function RegistrationForm() {
       address: address,
       products: products,
       categories: categories,
-      idproof: idproof,
+      // idproof: idproof,
       latitude: latitude,
       longitude: longitude
     };
@@ -105,41 +105,12 @@ export default function RegistrationForm() {
               </td>
               </tr>
               <br />
-              <tr>
-              <td>
-              <label className="formlabel">ID Proof</label>
-              </td>
-              <td>
-              <select
-                name="idproof"
-                placeholder="ID Proof"
-                required
-                onChange={(e) => setIdproof(e.target.value)}
-              >
-                <option
-                  defaultValue="Select"
-                  value="Select ID Proof"
-                >
-                  Select ID Proof
-                </option>
-                <option value="Aadhar Card">
-                  Aadhar Card
-                </option>
-                <option value="PAN Card">
-                  PAN Card
-                </option>
-                <option value="Voter ID">
-                  Voter ID
-                </option>
-              </select>
-              </td>
-              </tr>
               </table>
               <br/>
               
-              <input type="file" className="formlabel" name="idimg"></input>
+              {/* <input type="file" className="formlabel" name="idimg"></input> */}
               
-              <br/>
+              {/* <br/> */}
               
             </fieldset>
           </div>

@@ -4,7 +4,7 @@ import maplibregl from "maplibre-gl";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 function HomeScreen() {
-  const openInNewTab = (url) => {
+  const openTab = (url) => {
     window.open(url, "_self", "noopener,noreferrer");
   };
 
@@ -13,7 +13,7 @@ function HomeScreen() {
       <h2>MAP</h2>
       <div
         className="map-container"
-        onClick={() => openInNewTab("/map")}
+        onClick={() => openTab("/map")}
       >
         <Map
           mapLib={maplibregl}
@@ -91,46 +91,3 @@ function CustomLink({ to, children, ...props }) {
   );
 }
 
-/*
-
-<ul>
-        <li>
-          <div>
-            <h3>FRUITS</h3>
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt="FRUITS"
-            />
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>FRUITS</h3>
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt="FRUITS"
-            />
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>FRUITS</h3>
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt="FRUITS"
-            />
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>FRUITS</h3>
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt="FRUITS"
-            />
-          </div>
-        </li>
-      </ul>
-
-      
-*/

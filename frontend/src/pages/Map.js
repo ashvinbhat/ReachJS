@@ -15,14 +15,6 @@ export default function MapPage() {
     const fetchData = async () => {
       const result = await axios("/vendors/get");
       console.log(result.data);
-      /* 
-      map.current = new maplibregl.Map({
-        container: mapContainer.current, 
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [lng, lat],
-        zoom: zoom,
-      }); */
-      // add marker for each vendor with popup containing vendor details and set html color to green
       result.data.map((vendor) => {
         new maplibregl.Marker({ color: "green" })
           .setLngLat([vendor.longitude, vendor.latitude])

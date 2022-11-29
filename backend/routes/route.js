@@ -10,7 +10,7 @@ router.post("/register", (req, res)=>{
         address: req.body.address,
         products: req.body.products,
         categories: req.body.categories,
-        idproof: req.body.idproof,
+        // idproof: req.body.idproof,
         latitude: req.body.latitude,
         longitude: req.body.longitude
     })

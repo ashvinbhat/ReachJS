@@ -16,13 +16,8 @@ export default function Category(props) {
   return (
     <div>
       <h1>Vendors who sell {props.name}</h1>
-      {/* display vendor if Vendor.category === props.name */}
-
       {Vendors.data &&
         Vendors.data.map((vendor) => {
-          //   check if each category in vendor.categories === props.name
-          //   if yes, display the vendor
-          //   else, don't display the vendor
 
           if (vendor.categories.includes(props.name)) {
             flag = 1;
