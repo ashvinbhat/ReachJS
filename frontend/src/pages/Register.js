@@ -105,7 +105,6 @@ export default function RegistrationForm() {
               </td>
               </tr>
               <br />
-
               </table>
               <br/>
               
