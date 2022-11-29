@@ -10,7 +10,7 @@ const vendorSchema = new mongoose.Schema(
     address: { type: String, required: true },
     products: { type: [String], required: true },
     categories: {type: [String], required: true },
-    idproof: { type: String, required: true },
+    // idproof: { type: String, required: true },
   },
   {
     timestamps: true,
